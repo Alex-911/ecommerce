@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "ecommerce",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\Alex Productions V2\\Production Projects\\ECommerce\\Admin Web\\ecommerce-admin\\amplify\\backend\\api\\ecommerce\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authecommercef752c8a7"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+<div class="h-full w-full flex flex-col items-stretch justify-start">
+  <h1 mat-dialog-title>Add New Product</h1>
+  <form
+    mat-dialog-content
+    class="h-full w-full flex flex-col items-stretch justify-start space-y-3"
+    [formGroup]="productForm"
+  >
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Title</mat-label>
+        <input matInput placeholder="Product Title" formControlName="title" />
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Brand</mat-label>
+        <input matInput placeholder="Product Brand" formControlName="brand" />
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Varient</mat-label>
+        <input
+          matInput
+          placeholder="Product Varient"
+          formControlName="varient"
+        />
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Product Description"
+          formControlName="description"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let category of categories" [value]="category">
+            {{ category }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let category of subCategories" [value]="category">
+            {{ category }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <input type="file" name="" id="">
+      <!-- <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Image</mat-label>
+        <input
+          placeholder="Product Price"
+          formControlName="price"
+          type="number"
+        />
+      </mat-form-field> -->
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Price</mat-label>
+        <input
+          matInput
+          placeholder="Product Price"
+          formControlName="price"
+          type="number"
+        />
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Selling Price</mat-label>
+        <input
+          matInput
+          placeholder="Product Selling Price"
+          formControlName="sellingPrice"
+          type="number"
+        />
+      </mat-form-field>
+    </div>
+    <div class="w-full">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Product Quantity</mat-label>
+        <input
+          matInput
+          placeholder="Product Quantity"
+          formControlName="quantity"
+          type="number"
+        />
+      </mat-form-field>
+    </div>
+  </form>
+  <div mat-dialog-actions class="flex items-center justify-end space-x-5">
+    <button mat-raised-button (click)="onNoClick()" color="primary">
+      Add Product
+    </button>
+    <button mat-raised-button color="warn">Cancel</button>
+  </div>
+</div>

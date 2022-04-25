@@ -21,4 +21,53 @@
 #   content: String!
 # }
 
+type Product
+  @model
+  @searchable
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, read, delete] }
+      { allow: private, operations: [read] }
+    ]
+  ) {
+  id: ID! @primaryKey
+  name: String!
+  brand: String!
+  varient: String!
+  description: String
+  image: String!
+  category: Category @hasOne
+  SubCategory: SubCategory @hasOne
+  price: Float!
+  sellingPrice: Float!
+  quantity: Int!
+}
 
+type Category
+  @model
+  @searchable
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, read, delete] }
+      { allow: private, operations: [read] }
+    ]
+  ) {
+  id: ID! @primaryKey
+  name: String!
+  image: String!
+}
+
+type SubCategory
+  @model
+  @searchable
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, read, delete] }
+      { allow: private, operations: [read] }
+    ]
+  ) {
+  id: ID! @primaryKey
+  category: Category @hasOne
+  name: String!
+  image: String!
+}

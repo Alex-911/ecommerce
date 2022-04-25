@@ -1,0 +1,217 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateProduct($owner: String) {
+  onCreateProduct(owner: $owner) {
+    id
+    name
+    brand
+    varient
+    description
+    image
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    SubCategory {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    price
+    sellingPrice
+    quantity
+    createdAt
+    updatedAt
+    productCategoryId
+    productSubCategoryId
+    owner
+  }
+}
+subscription OnUpdateProduct($owner: String) {
+  onUpdateProduct(owner: $owner) {
+    id
+    name
+    brand
+    varient
+    description
+    image
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    SubCategory {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    price
+    sellingPrice
+    quantity
+    createdAt
+    updatedAt
+    productCategoryId
+    productSubCategoryId
+    owner
+  }
+}
+subscription OnDeleteProduct($owner: String) {
+  onDeleteProduct(owner: $owner) {
+    id
+    name
+    brand
+    varient
+    description
+    image
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    SubCategory {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    price
+    sellingPrice
+    quantity
+    createdAt
+    updatedAt
+    productCategoryId
+    productSubCategoryId
+    owner
+  }
+}
+subscription OnCreateCategory($owner: String) {
+  onCreateCategory(owner: $owner) {
+    id
+    name
+    image
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateCategory($owner: String) {
+  onUpdateCategory(owner: $owner) {
+    id
+    name
+    image
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteCategory($owner: String) {
+  onDeleteCategory(owner: $owner) {
+    id
+    name
+    image
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateSubCategory($owner: String) {
+  onCreateSubCategory(owner: $owner) {
+    id
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    name
+    image
+    createdAt
+    updatedAt
+    subCategoryCategoryId
+    owner
+  }
+}
+subscription OnUpdateSubCategory($owner: String) {
+  onUpdateSubCategory(owner: $owner) {
+    id
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    name
+    image
+    createdAt
+    updatedAt
+    subCategoryCategoryId
+    owner
+  }
+}
+subscription OnDeleteSubCategory($owner: String) {
+  onDeleteSubCategory(owner: $owner) {
+    id
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    name
+    image
+    createdAt
+    updatedAt
+    subCategoryCategoryId
+    owner
+  }
+}

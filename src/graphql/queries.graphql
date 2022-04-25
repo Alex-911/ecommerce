@@ -1,0 +1,342 @@
+# this is an auto generated file. This will be overwritten
+query GetProduct($id: ID!) {
+  getProduct(id: $id) {
+    id
+    name
+    brand
+    varient
+    description
+    image
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    SubCategory {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    price
+    sellingPrice
+    quantity
+    createdAt
+    updatedAt
+    productCategoryId
+    productSubCategoryId
+    owner
+  }
+}
+query ListProducts(
+  $id: ID
+  $filter: ModelProductFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listProducts(
+    id: $id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      name
+      brand
+      varient
+      description
+      image
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      SubCategory {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        subCategoryCategoryId
+        owner
+      }
+      price
+      sellingPrice
+      quantity
+      createdAt
+      updatedAt
+      productCategoryId
+      productSubCategoryId
+      owner
+    }
+    nextToken
+  }
+}
+query SearchProducts(
+  $filter: SearchableProductFilterInput
+  $sort: [SearchableProductSortInput]
+  $limit: Int
+  $nextToken: String
+  $from: Int
+  $aggregates: [SearchableProductAggregationInput]
+) {
+  searchProducts(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+    from: $from
+    aggregates: $aggregates
+  ) {
+    items {
+      id
+      name
+      brand
+      varient
+      description
+      image
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      SubCategory {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        subCategoryCategoryId
+        owner
+      }
+      price
+      sellingPrice
+      quantity
+      createdAt
+      updatedAt
+      productCategoryId
+      productSubCategoryId
+      owner
+    }
+    nextToken
+    total
+    aggregateItems {
+      name
+      result {
+        ... on SearchableAggregateScalarResult {
+          value
+        }
+        ... on SearchableAggregateBucketResult {
+          buckets {
+            key
+            doc_count
+          }
+        }
+      }
+    }
+  }
+}
+query GetCategory($id: ID!) {
+  getCategory(id: $id) {
+    id
+    name
+    image
+    createdAt
+    updatedAt
+    owner
+  }
+}
+query ListCategories(
+  $id: ID
+  $filter: ModelCategoryFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listCategories(
+    id: $id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    nextToken
+  }
+}
+query SearchCategories(
+  $filter: SearchableCategoryFilterInput
+  $sort: [SearchableCategorySortInput]
+  $limit: Int
+  $nextToken: String
+  $from: Int
+  $aggregates: [SearchableCategoryAggregationInput]
+) {
+  searchCategories(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+    from: $from
+    aggregates: $aggregates
+  ) {
+    items {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    nextToken
+    total
+    aggregateItems {
+      name
+      result {
+        ... on SearchableAggregateScalarResult {
+          value
+        }
+        ... on SearchableAggregateBucketResult {
+          buckets {
+            key
+            doc_count
+          }
+        }
+      }
+    }
+  }
+}
+query GetSubCategory($id: ID!) {
+  getSubCategory(id: $id) {
+    id
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    name
+    image
+    createdAt
+    updatedAt
+    subCategoryCategoryId
+    owner
+  }
+}
+query ListSubCategories(
+  $id: ID
+  $filter: ModelSubCategoryFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listSubCategories(
+    id: $id
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    nextToken
+  }
+}
+query SearchSubCategories(
+  $filter: SearchableSubCategoryFilterInput
+  $sort: [SearchableSubCategorySortInput]
+  $limit: Int
+  $nextToken: String
+  $from: Int
+  $aggregates: [SearchableSubCategoryAggregationInput]
+) {
+  searchSubCategories(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+    from: $from
+    aggregates: $aggregates
+  ) {
+    items {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    nextToken
+    total
+    aggregateItems {
+      name
+      result {
+        ... on SearchableAggregateScalarResult {
+          value
+        }
+        ... on SearchableAggregateBucketResult {
+          buckets {
+            key
+            doc_count
+          }
+        }
+      }
+    }
+  }
+}

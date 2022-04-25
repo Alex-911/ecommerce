@@ -1,0 +1,244 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateProduct(
+  $input: CreateProductInput!
+  $condition: ModelProductConditionInput
+) {
+  createProduct(input: $input, condition: $condition) {
+    id
+    name
+    brand
+    varient
+    description
+    image
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    SubCategory {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    price
+    sellingPrice
+    quantity
+    createdAt
+    updatedAt
+    productCategoryId
+    productSubCategoryId
+    owner
+  }
+}
+mutation UpdateProduct(
+  $input: UpdateProductInput!
+  $condition: ModelProductConditionInput
+) {
+  updateProduct(input: $input, condition: $condition) {
+    id
+    name
+    brand
+    varient
+    description
+    image
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    SubCategory {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    price
+    sellingPrice
+    quantity
+    createdAt
+    updatedAt
+    productCategoryId
+    productSubCategoryId
+    owner
+  }
+}
+mutation DeleteProduct(
+  $input: DeleteProductInput!
+  $condition: ModelProductConditionInput
+) {
+  deleteProduct(input: $input, condition: $condition) {
+    id
+    name
+    brand
+    varient
+    description
+    image
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    SubCategory {
+      id
+      category {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        owner
+      }
+      name
+      image
+      createdAt
+      updatedAt
+      subCategoryCategoryId
+      owner
+    }
+    price
+    sellingPrice
+    quantity
+    createdAt
+    updatedAt
+    productCategoryId
+    productSubCategoryId
+    owner
+  }
+}
+mutation CreateCategory(
+  $input: CreateCategoryInput!
+  $condition: ModelCategoryConditionInput
+) {
+  createCategory(input: $input, condition: $condition) {
+    id
+    name
+    image
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation UpdateCategory(
+  $input: UpdateCategoryInput!
+  $condition: ModelCategoryConditionInput
+) {
+  updateCategory(input: $input, condition: $condition) {
+    id
+    name
+    image
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation DeleteCategory(
+  $input: DeleteCategoryInput!
+  $condition: ModelCategoryConditionInput
+) {
+  deleteCategory(input: $input, condition: $condition) {
+    id
+    name
+    image
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation CreateSubCategory(
+  $input: CreateSubCategoryInput!
+  $condition: ModelSubCategoryConditionInput
+) {
+  createSubCategory(input: $input, condition: $condition) {
+    id
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    name
+    image
+    createdAt
+    updatedAt
+    subCategoryCategoryId
+    owner
+  }
+}
+mutation UpdateSubCategory(
+  $input: UpdateSubCategoryInput!
+  $condition: ModelSubCategoryConditionInput
+) {
+  updateSubCategory(input: $input, condition: $condition) {
+    id
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    name
+    image
+    createdAt
+    updatedAt
+    subCategoryCategoryId
+    owner
+  }
+}
+mutation DeleteSubCategory(
+  $input: DeleteSubCategoryInput!
+  $condition: ModelSubCategoryConditionInput
+) {
+  deleteSubCategory(input: $input, condition: $condition) {
+    id
+    category {
+      id
+      name
+      image
+      createdAt
+      updatedAt
+      owner
+    }
+    name
+    image
+    createdAt
+    updatedAt
+    subCategoryCategoryId
+    owner
+  }
+}

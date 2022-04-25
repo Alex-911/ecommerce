@@ -1,0 +1,16 @@
+{
+  "resourceName": "ecommerce",
+  "policyUUID": "b6b8d146",
+  "bucketName": "ecommerce3195391604ea46d68057ec78380d9f7a",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

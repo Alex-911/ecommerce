@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './pages/login/login.component';
 import { RouterModule, Routes } from '@angular/router';
-// import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';W
+import {
+  AmplifyAuthenticatorModule,
+  AuthenticatorService,
+} from '@aws-amplify/ui-angular';
 
 const routes: Routes = [
   {
@@ -16,7 +19,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    // AmplifyAuthenticatorModule,
+    AmplifyAuthenticatorModule,
   ],
+  providers: [AuthenticatorService],
 })
 export class AuthModule {}

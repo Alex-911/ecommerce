@@ -10,6 +10,12 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { ErrorComponent } from './shared/pages/error/error.component';
+import {
+  AmplifyAuthenticatorModule,
+  AuthenticatorService,
+} from '@aws-amplify/ui-angular';
+import { SignedInGuard } from './shared/guards/signed-in.guard';
+import { SignedOutGuard } from './shared/guards/signed-out.guard';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent],
@@ -17,6 +23,7 @@ import { ErrorComponent } from './shared/pages/error/error.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AmplifyAuthenticatorModule,
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
@@ -25,7 +32,7 @@ import { ErrorComponent } from './shared/pages/error/error.component';
       logOnly: environment.production,
     }),
   ],
-  providers: [],
+  providers: [AuthenticatorService, SignedInGuard, SignedOutGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
